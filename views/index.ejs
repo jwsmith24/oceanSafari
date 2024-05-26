@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %>></title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
+    <%- include('./partials/header'); %>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+ <ul>
+  <% inventoryList.forEach((item) => { %>
+    <li>
+      <p><strong>Name: </strong><%= item.name %></p>
+      <% if (item.category) { %>
+        <p><strong>Category: </strong><%= item.category.name %></p>
+      <% } %>
+      <p><strong>Description: </strong><%= item.description %></p>
+      <p><strong>Price: </strong><%= item.price %></p>
+      <p><strong>Stock Count: </strong><%= item.stockCount %></p>
+    </li>
+  <% }); %>
+</ul>
   </body>
 </html>

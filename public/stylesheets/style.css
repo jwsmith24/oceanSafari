@@ -1,8 +1,26 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font:
+    14px 'Lucida Grande',
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  gap: 10px;
+  background-color: gray;
+  padding: 20px;
+}
+
+li:hover {
+  background-color: rgba(197, 190, 190, 0.555);
 }

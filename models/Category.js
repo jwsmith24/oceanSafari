@@ -14,7 +14,7 @@ const catSchema = new Schema({
 });
 
 catSchema.virtual('url').get(function () {
-  return `/inventory/category/${this._id}`;
+  return `/inventory/${this._id}`;
 });
 
 const Category = model('Category', catSchema);

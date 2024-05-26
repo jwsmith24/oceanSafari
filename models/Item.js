@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+// eslint-disable-next-line no-unused-vars
+import Category from './Category.js';
 const { Schema, model } = mongoose;
 
 const itemSchema = new Schema({
@@ -27,7 +29,7 @@ const itemSchema = new Schema({
 });
 
 itemSchema.virtual('url').get(function () {
-  return `/inventory/${this.category}/${this._id}`;
+  return `/inventory/${this._id}`;
 });
 
 const Item = model('Item', itemSchema);

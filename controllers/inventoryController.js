@@ -9,10 +9,17 @@ export const getItems = async (req, res) => {
   }
 
   try {
-    const items = await Item.find();
-    res.status(200).json(items);
+    const items = await Item.find().populate('category');
+    res.render('index', processItems(items));
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
+
+function processItems(items) {
+  return {
+    title: 'Inventory',
+    inventoryList: items,
+  };
+}

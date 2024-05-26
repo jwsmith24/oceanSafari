@@ -7,7 +7,6 @@ import logger from 'morgan';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { indexRouter } from './routes/indexRouter.js';
-import { inventoryRouter } from './routes/inventoryRouter.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -25,7 +24,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/inventory', inventoryRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
