@@ -5,17 +5,31 @@
  */
 
 import mongoose from 'mongoose';
-import Item from './models/Item.js';
-
-const itemCat = {
-  STICKER: 'sticker',
-  RASH_GUARD: 'rash-guard',
-  HAT: 'hat',
-};
+import Item from '../models/Item.js';
+import Category from '../models/Category.js';
 
 mongoose.connect(
   'mongodb+srv://jsmith181997:QWF2Tquxvu7AFzQu@safari.gsoww1i.mongodb.net/safariData?retryWrites=true&w=majority&appName=safari'
 );
+
+const hat = await Category.create({
+  name: 'Hat',
+  description: 'Hats!',
+});
+const rashGuard = await Category.create({
+  name: 'Rash Guard',
+  description: 'Rash guards!',
+});
+const sticker = await Category.create({
+  name: 'Sticker',
+  description: 'Stickers!',
+});
+
+const itemCat = {
+  HAT: hat._id,
+  RASH_GUARD: rashGuard._id,
+  STICKER: sticker._id,
+};
 
 const tigerSharkSticker = await Item.create({
   name: 'Tiger Shark Sticker',
@@ -59,3 +73,7 @@ const safariHat = await Item.create({
 });
 
 console.log(safariHat);
+
+const test = await Item.find().populate('category');
+console.log(test);
+await mongoose.disconnect();

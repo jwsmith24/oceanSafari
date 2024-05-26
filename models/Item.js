@@ -6,8 +6,10 @@ const itemSchema = new Schema({
     type: String,
     required: true,
   },
+  // reference to category
   category: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category',
     required: true,
   },
   description: {
@@ -25,8 +27,8 @@ const itemSchema = new Schema({
 });
 
 itemSchema.virtual('url').get(function () {
-  return `/inventory/${this._id}`;
+  return `/inventory/${this.category}/${this._id}`;
 });
 
-const Sticker = model('Sticker', itemSchema);
-export default Sticker;
+const Item = model('Item', itemSchema);
+export default Item;
