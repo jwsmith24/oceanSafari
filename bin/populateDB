@@ -76,4 +76,3 @@ console.log(safariHat);
 
 const test = await Item.find().populate('category');
 console.log(test);
-await mongoose.disconnect();

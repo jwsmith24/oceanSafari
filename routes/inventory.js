@@ -1,8 +1,7 @@
 import { Router } from 'express';
+import { getCategories } from '../controllers/categoryController.js';
 
 export const inventoryRouter = Router();
 
 /* GET home page. */
-inventoryRouter.get('/', function (req, res) {
-  res.render('index', { title: 'Inventory Page' });
-});
+inventoryRouter.get('/', getCategories);
