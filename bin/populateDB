@@ -1,3 +1,9 @@
+#!/usr/bin/env node
+
+/**
+ * Script to populate the database with sample inventory items
+ */
+
 import mongoose from 'mongoose';
 import Item from './models/Item.js';
 
