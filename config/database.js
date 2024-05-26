@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const uri =
-  'mongodb+srv://jsmith181997:QWF2Tquxvu7AFzQu@safari.gsoww1i.mongodb.net/?retryWrites=true&w=majority&appName=safari';
+  'mongodb+srv://jsmith181997:QWF2Tquxvu7AFzQu@safari.gsoww1i.mongodb.net/safariData?retryWrites=true&w=majority&appName=safari';
 
 const clientOptions = {
   serverApi: { version: '1', strict: true, deprecationErrors: true },

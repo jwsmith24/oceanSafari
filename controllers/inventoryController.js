@@ -5,9 +5,7 @@ const isConnected = () => mongoose.connection.readyState === 1;
 
 export const getItems = async (req, res) => {
   if (!isConnected()) {
-    return res
-      .status(500)
-      .json({ message: 'Not connected to database asdasdas' });
+    return res.status(500).json({ message: 'Not connected to database :(' });
   }
 
   try {
