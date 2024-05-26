@@ -14,7 +14,6 @@ Products offered include:
 
 - Stickers
 - Rash guards
-- Sun hoodies
 - Hats
 
 ### Phase Two: Safaris
