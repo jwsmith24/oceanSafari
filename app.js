@@ -6,8 +6,8 @@ import logger from 'morgan';
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { indexRouter } from './routes/index.js';
-import { inventoryRouter } from './routes/inventory.js';
+import { indexRouter } from './routes/indexRouter.js';
+import { inventoryRouter } from './routes/inventoryRouter.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
