@@ -14,7 +14,6 @@ Products offered include:
 
 - Stickers
 - Rash guards
-- T-Shirts
 - Sun hoodies
 - Hats
 
