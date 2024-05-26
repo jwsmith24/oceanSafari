@@ -4,7 +4,7 @@ Observe and learn about incredible marine life in their environment!
 
 ## Project Description
 
-This application provides a basic shop inventory and booking system for a fictional ocean safari company, leveraging new skills with MongoDB, Express, and Node.
+This application provides a basic shop inventory and booking system for a fictional ocean safari company, leveraging new skills with MongoDB, Express, and Node. Additionally, EJS is used as the rendering engine and Mongoose as the ORM for interactions with MongoDB.
 
 ### Phase One: Ocean Apparel
 
